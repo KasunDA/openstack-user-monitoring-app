@@ -1,3 +1,4 @@
+process.chdir(process.env['HOME']);
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -7,7 +8,7 @@ var bodyParser = require('body-parser');
 var monitor = require('./libs/monitor');
 var routes = require('./routes/index');
 var users = require('./routes/users');
-
+var search = require('./routes/search')
 var app = express();
 
 // view engine setup
@@ -24,6 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/search', search);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -57,6 +60,6 @@ app.use(function(err, req, res, next) {
 });
 
 app.listen(8080);
-console.log('Running on http://localhost:8080');
+console.log('Running on http://0.0.0.0:8080');
 monitor();
 module.exports = app;
