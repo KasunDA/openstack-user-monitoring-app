@@ -6,7 +6,7 @@ This is the repository for the user-deployable. Back-end package is here:
 https://github.com/nakapika/openstack-recommendation-engine
 ```
 
-Technology Stack: *NodeJS, Express*
+Technology Stack: *Node.js, Express.js*
 
 Monitoring activity of users in VMs deployed using OpenStack and giving relevant recommendations to help user.
 
