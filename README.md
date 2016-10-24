@@ -24,7 +24,7 @@ To setup project: `npm install`
 
 Run app.js using: `npm start`
 
-Type commands on the terminal to get recommendations. :)
+Type commands on the terminal to get recommendations at http://0.0.0.0:8080/search :)
 
 ## Contributing
 

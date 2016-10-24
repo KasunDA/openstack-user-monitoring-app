@@ -9,7 +9,11 @@ var monitor = require('./libs/monitor');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var search = require('./routes/search')
-var app = express();
+var app = require('express')();
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
+server.listen(8080);
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -59,7 +63,8 @@ app.use(function(err, req, res, next) {
   });
 });
 
-app.listen(8080);
+//app.listen(8080);
 console.log('Running on http://0.0.0.0:8080');
 monitor();
-module.exports = app;
+module.exports.app = app;
+module.exports.io = io;

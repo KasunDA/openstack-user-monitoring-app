@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+  <h1><%= title %></h1>
+  <p>Welcome to <%= title %></p>
+  <p id = "p1">Data <%= data %></p>
+  <script src="/socket.io/socket.io.js">
+  </script>
+  <script>
+  var socket = io.connect('http://0.0.0.0:8080');
+  console.log('test socket ');
+  socket.on('monitor', function (data) {
+    data = JSON.parse(data);
+    var json_data = "";
+    if(data.response.docs.length === 0) json_data = "No Recommendation for "+data.responseHeader.params.q;
+    else json_data = data.response.docs[0].text;
+    document.getElementById("p1").innerHTML = json_data;
+  });
+  </script>
+</body>
 </html>
