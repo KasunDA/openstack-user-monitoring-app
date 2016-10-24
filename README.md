@@ -10,7 +10,9 @@ Technology Stack: *NodeJS, Express*
 
 Monitoring activity of users in VMs deployed using OpenStack and giving relevant recommendations to help user.
 
-Will be using the .bash_history of the user to give him helpful recommendations. The data for recommendations is collected by crawling the web and persisted in Apache Solr.
+Will be using the .bash_history of the user to give him helpful recommendations.
+
+The data for recommendations is collected by crawling the web and persisting the data in Apache Solr.
 
 ## Installation
 
