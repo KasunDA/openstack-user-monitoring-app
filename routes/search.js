@@ -20,7 +20,7 @@ router.get('/:keyword', function(req, res, next) {
 });
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express', data: 'Recommendations'});
+  res.render('index', { title: 'Team Stratus', data: 'Welcome to Stratus' });
 });
 
 module.exports = router;
