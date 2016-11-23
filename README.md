@@ -3,7 +3,7 @@
 ```
 This is the repository for the user-deployable. Back-end package is here:
 ```
-[https://github.com/nakapika/openstack-recommendation-engine]
+https://github.com/nakapika/openstack-recommendation-engine
 
 Technology Stack: **Node.js, Express.js**
 
